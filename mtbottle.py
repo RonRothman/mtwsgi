@@ -19,11 +19,12 @@ if __name__ == '__main__':
 
     @app.route('/')
     def foo():
-        time.sleep(1)
+        time.sleep(2)
         return 'hello, world!\n'
 
-    app.run(server=MTServer, thread_count=2)
-    #app.run()
-    #httpd = mtwsgi.make_server('0.0.0.0', 8080, app, 3)
-    #httpd.serve_forever()
+    app.run(server=MTServer, host='0.0.0.0', port=8080, thread_count=3)
+
+    # or:
+    # httpd = mtwsgi.make_server('0.0.0.0', 8080, app, 3)
+    # httpd.serve_forever()
 
