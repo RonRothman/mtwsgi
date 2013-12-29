@@ -11,6 +11,7 @@ Can be used indepently of [Bottle](http://bottlepy.org/), but here's an example 
 
     import bottle
     import time
+    from mtbottle import MTServer
 
     app = bottle.Bottle()
 
